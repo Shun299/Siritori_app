@@ -93,32 +93,5 @@ if (typeof window !== 'undefined') {
             previous_word.textContent = text_word;
             console.log(past_word);
         };
-    };
-<<<<<<< HEAD
-};
-=======
-
-    // 失敗条件２：もし直前の単語の末尾と入力した単語の先頭が一緒じゃないなら、警告
-    if (previous.slice(-1) !== text_word.slice(0,1)) {
-        alert('前の言葉のおわりと、次の言葉のはじまりがちがってるよ');
-        return;
-    };
-
-    // 失敗条件３：過去に使用した単語が入力されている
-    if (past_word.includes(text_word) === true) {
-        alert('もう使った言葉だから、まけだよ');
-        reset();
-        return;
-    };
-
-    past_word.push(text_word);
-    text.value = '';
-    const li = document.createElement('li');
-    li.textContent = text_word;
-    word_history.appendChild(li);
-
-    // 直前の単語をtext_wordに変換
-    previous_word.textContent = text_word;
-    console.log(past_word);
-};
->>>>>>> ab29c28a66a3d1504c6e10fed15d0c9b8a1e253f
+    });
+}
